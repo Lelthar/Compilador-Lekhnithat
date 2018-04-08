@@ -1,8 +1,8 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <iostream>     // std::cout
-#include <fstream>      // std::ifstream
+#include <iostream>     
+#include <fstream>      
 #include "scanner.h"
 
 int main()
@@ -14,8 +14,8 @@ int main()
 
 void leer_archivo(char *archivo_nombre){
 	std::ifstream archivo(archivo_nombre,  std::ios_base::in);
-    if (archivo.is_open())
-    {
+
+    if (archivo.is_open()){
         char* buffer = new char[1024];
         while (archivo.read(buffer, 1024))
         {
@@ -28,9 +28,7 @@ void leer_archivo(char *archivo_nombre){
 
        delete[] buffer;
        archivo.close();
-   }
-   else
-   {
+   }else{
         std::cout<< "No se puso abrir el archivo:" << archivo_nombre << std::endl;
    }
 }
