@@ -33,7 +33,7 @@ public class Token {
                 +"columna de inicio: "+Integer.toString( this.columna_inicio)+"\n"
                 +"columna de fin: "+Integer.toString( this.columna_final)+"\n"
                 +"fila: "+Integer.toString( this.fila)+"\n"
-                +"Lexema: "+Integer.toString( this.lexema.length())+"\n";
+                +"Lexema: "+this.lexema+"\n";
     }
     
 }

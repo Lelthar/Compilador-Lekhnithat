@@ -63,42 +63,73 @@ public class Scanner {
            while ((largo = file.read(buffer_size)) != -1){ 
                buffer = new String(buffer_size, 0, largo).toLowerCase();
                estado_actual = 130;
-               //System.out.println(buffer.charAt(3) == '\n');
+               
                for(posicion = 0; posicion < buffer.length();posicion++){
+                   
                    deme_siguiente_caracter();
-                   //System.out.println("Posicion: "+Integer.toString(posicion));
-                   /*System.out.println(estado_actual);
-                   System.out.println(alfabeto.get(caracter_actual));*/
-                   estado_actual = tabla_transiciones[estado_actual][alfabeto.get(caracter_actual)];
-                   /*System.out.println(estado_actual);
-                   System.out.println("--------------------------------");*/
+                   //System.out.println(caracter_actual);
+                   if(caracter_actual > 0){
+                        estado_actual = tabla_transiciones[estado_actual][alfabeto.get(caracter_actual)];
+       
+                        if(estado_actual < 129){ //Pone el tamaño de los terminales
 
-                   if(estado_actual < 129){ //Pone el tamaño de los terminales
-                    
-                       if(bandera_token){
-                           bandera_token = false;
-                           deme_token();
-                            //System.out.println("Token guardado");
-                            estado_actual = 130; //Le pone el estado inicial
-                            lexema = "";
-                           tome_este_caracter();
-                       }else{
-                           bandera_token = true;
-                           lexema += caracter_actual;
-                           deme_token();
-                           //System.out.println("Token guardado");
-                           estado_actual = 130; //Le pone el estado inicial
-                           lexema = "";
-                           this.columna++;
-                           //this.posicion++;
-                           
-                           //System.out.println(buffer.charAt(posicion));
-                       }
-                       //this.columna++;
-                   }else{
-                       lexema += caracter_actual;
-                       this.columna++;
+                            if(bandera_token && lexema.length() > 1 && (caracter_actual != ' ' && caracter_actual != '\t' && caracter_actual != '\n')){
+                                /*System.out.println("-------");
+                                System.out.println("Posicion if 1: "+Integer.toString(posicion));
+                                //System.out.println("Columna: "+);
+                                System.out.println("-------");*/
+                                bandera_token = false;
+                                deme_token();
+                                 //System.out.println("Token guardado");
+                                estado_actual = 130; //Le pone el estado inicial
+                                lexema = "";
+                                lexema += caracter_actual;
+                                tome_este_caracter();
+                                caracter_actual = 0;
+                            }else if(bandera_token){
+                                bandera_token = true;
+
+                                //
+                                if((caracter_actual != ' ' && caracter_actual != '\t' && caracter_actual != '\n')){
+                                    lexema += caracter_actual;
+                                }
+
+                               /* System.out.println("-------");
+                                System.out.println("Posicion if 2: "+Integer.toString(posicion));
+                                System.out.println("Estado: "+Integer.toString(estado_actual));
+                                System.out.println("Lexema: "+lexema);
+                                System.out.println("-------");*/
+
+                                deme_token();
+
+                                estado_actual = 130; //Le pone el estado inicial
+                                lexema = "";
+
+                                this.columna++;
+                                caracter_actual = 0;
+
+                            }else{
+                                /*System.out.println("-------");
+                                System.out.println("Posicion if 3: "+Integer.toString(posicion));
+                                System.out.println("Estado: "+Integer.toString(estado_actual));
+                                System.out.println("Lexema: "+lexema);
+                                System.out.println("-------");*/
+                                bandera_token = true;
+                                //lexema += caracter_actual;
+                                deme_token();
+
+                                estado_actual = 130; //Le pone el estado inicial
+                                lexema = "";
+                                this.columna++;
+                                caracter_actual = 0;
+
+                            }
+                        }else{
+                            lexema += caracter_actual;
+                            this.columna++;
+                        }
                    }
+                   
 
                }
 
@@ -122,15 +153,34 @@ public class Scanner {
            if(this.buffer.charAt(this.posicion) == ' ' && this.lexema.isEmpty()){
                this.columna += 1;
                this.posicion++;
+               //System.out.println("Espacio");
            }else if(buffer.charAt(this.posicion) == '\t' && this.lexema.isEmpty()){
                this.columna += 4;
                this.posicion++;
+               //System.out.println("Tab");
            }else if(this.buffer.charAt(this.posicion) == '\n' && this.lexema.isEmpty()){
                this.lineas += 1;
                this.posicion++;
                this.columna = 0;
                //System.out.println("Salto de linea");
+               //System.out.println("Salto de linea");
            }else{
+               if(this.buffer.charAt(this.posicion) == ' '){
+                    this.columna += 1;
+                    //this.posicion++;
+                    //System.out.println("Espacio");
+                }else if(buffer.charAt(this.posicion) == '\t'){
+                    this.columna += 4;
+                    //this.posicion++;
+                    //System.out.println("Tab");
+                }else if(this.buffer.charAt(this.posicion) == '\n'){
+                    this.lineas += 1;
+                    //this.posicion++;
+                    this.columna = 0;
+                }
+               //System.out.println("Salto de linea");
+               //System.out.println("Salto de linea");
+               //System.out.println("Caracter: "+Integer.toString(posicion));
                this.caracter_actual = this.buffer.charAt(this.posicion);
                break;
            }
@@ -147,9 +197,6 @@ public class Scanner {
         this.file.close(); //Finalizar scanner
     }
 
-    public void generar_tabla_transiciones(){
-
-   }
 
     public void deme_token(){
         Token token = new Token(this.estado_actual,this.lexema,this.lineas,this.columna-lexema.length(),this.columna,0);
