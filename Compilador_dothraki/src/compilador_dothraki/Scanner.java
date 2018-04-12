@@ -67,13 +67,19 @@ public class Scanner {
                for(posicion = 0; posicion < buffer.length();posicion++){
                    
                    deme_siguiente_caracter();
-                   //System.out.println(caracter_actual);
+         
                    if(caracter_actual > 0){
                         estado_actual = tabla_transiciones[estado_actual][alfabeto.get(caracter_actual)];
+                        
+                        if(posicion+1 == buffer.length() && lexema.length() > 0){
+                            lexema += caracter_actual;
+                            caracter_actual = ' ';
+                            estado_actual = tabla_transiciones[estado_actual][alfabeto.get(caracter_actual)];
+                        }
        
-                        if(estado_actual < 129){ //Pone el tamaño de los terminales
+                        if(estado_actual < 125){ //Pone el tamaño de los terminales
 
-                            if(bandera_token && lexema.length() > 1 && (caracter_actual != ' ' && caracter_actual != '\t' && caracter_actual != '\n')){
+                            if(bandera_token && lexema.length() > 1 && (caracter_actual != ' ' && caracter_actual != '\t' && caracter_actual != '\n' && caracter_actual != (char) 39 && caracter_actual != (char) 34)){
                                 /*System.out.println("-------");
                                 System.out.println("Posicion if 1: "+Integer.toString(posicion));
                                 //System.out.println("Columna: "+);
@@ -277,7 +283,7 @@ public class Scanner {
     }
     
    public int[][] obtener_tabla_transiciones() throws IOException{
-        int[][] resultado = new int[200][70];
+        int[][] resultado = new int[407][70];
         try (
         BufferedReader br = new BufferedReader(new FileReader("src/compilador_dothraki/testfile.txt"))) {
         String line;
