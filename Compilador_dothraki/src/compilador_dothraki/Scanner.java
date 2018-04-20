@@ -36,6 +36,7 @@ public class Scanner {
     public int[][] tabla_transiciones; 
     public HashMap<Character,Integer> alfabeto;
     public HashMap<Integer,String> paleta_colores;
+    public int codigo_error;
 
     
     public Scanner() throws IOException {
@@ -62,10 +63,12 @@ public class Scanner {
            file = new FileInputStream(archivo); 
            largo = -1;
            lexema = "";
+           estado_actual = 130;
+           codigo_error = 0;
 
            while ((largo = file.read(buffer_size)) != -1){ 
                buffer = new String(buffer_size, 0, largo).toLowerCase();
-               estado_actual = 130;
+              // 
                
                for(posicion = 0; posicion < buffer.length();posicion++){
                    
@@ -99,26 +102,52 @@ public class Scanner {
                                 estado_actual = 130; //Le pone el estado inicial
                                 lexema = "";
 
-                                this.columna++;
+                                //this.columna++;
                                 caracter_actual = 0;
 
                             }else{
+                                this.columna++;
                                 bandera_token = true;
                                 //lexema += caracter_actual;
                                 deme_token();
 
                                 estado_actual = 130; //Le pone el estado inicial
                                 lexema = "";
-                                this.columna++;
+                                
                                 caracter_actual = 0;
 
                             }
+                            if(this.buffer.charAt(this.posicion) == ' '){
+                                this.columna += 1;
+
+                            }else if(buffer.charAt(this.posicion) == '\t'){
+                                this.columna += 4;
+
+                            }else if(this.buffer.charAt(this.posicion) == '\n'){
+                                this.lineas += 1;
+
+                                this.columna = 0;
+                            }
+                        }else if(estado_actual > 452){
+
+                            lexema += caracter_actual;
+                            
+                            codigo_error = 1;
+
+                            deme_token();
+
+                            estado_actual = 130; //Le pone el estado inicial
+                            lexema = "";
+                            
+                            codigo_error = 0;
+
+                            //this.columna++;
+                            caracter_actual = 0;
                         }else{
                             lexema += caracter_actual;
                             this.columna++;
                         }
                    }
-                   
 
                }
 
@@ -159,18 +188,6 @@ public class Scanner {
                this.columna = 0;
 
            }else{
-               if(this.buffer.charAt(this.posicion) == ' '){
-                    this.columna += 1;
-
-                }else if(buffer.charAt(this.posicion) == '\t'){
-                    this.columna += 4;
-
-                }else if(this.buffer.charAt(this.posicion) == '\n'){
-                    this.lineas += 1;
-
-                    this.columna = 0;
-                }
-               
                this.caracter_actual = this.buffer.charAt(this.posicion);
                break;
            }
@@ -189,18 +206,18 @@ public class Scanner {
 
 
     public void deme_token(){
-        Token token = new Token(this.estado_actual,this.lexema,this.lineas,this.columna-lexema.length(),this.columna,0);
+        Token token = new Token(this.estado_actual,this.lexema,this.lineas,this.columna-lexema.length(),this.columna-1,this.codigo_error);
         this.lista_tokens.add(token);
     }
     
     public void generar_paleta_colores(){
-        this.paleta_colores.put(0,"#43ed9");
-        this.paleta_colores.put(1,"#60c73");
-        this.paleta_colores.put(2,"#7da0d");
-        this.paleta_colores.put(3,"#9a7a7");
-        this.paleta_colores.put(4,"#b7541");
-        this.paleta_colores.put(5,"#d42db");
-        this.paleta_colores.put(6,"#f1075");
+        this.paleta_colores.put(0,"#0d62bb");
+        this.paleta_colores.put(1,"#060c73");
+        this.paleta_colores.put(2,"#07da0d");
+        this.paleta_colores.put(3,"#09a7a7");
+        this.paleta_colores.put(4,"#0b7541");
+        this.paleta_colores.put(5,"#0d42db");
+        this.paleta_colores.put(6,"#0f1075");
         this.paleta_colores.put(7,"#10de0f");
         this.paleta_colores.put(8,"#12aba9");
         this.paleta_colores.put(9,"#147943");
@@ -312,7 +329,14 @@ public class Scanner {
         this.paleta_colores.put(115,"#d39b07");
         this.paleta_colores.put(116,"#d568a1");
         this.paleta_colores.put(117,"#d7363b");
-
+        this.paleta_colores.put(453,"#d9363b");
+        this.paleta_colores.put(454,"#e7363b");
+        this.paleta_colores.put(455,"#f93f0b");
+        this.paleta_colores.put(456,"#f7363b");
+        this.paleta_colores.put(457,"#a7363b");
+        this.paleta_colores.put(458,"#f9993b");
+        this.paleta_colores.put(459,"#d0063b");
+        this.paleta_colores.put(460,"#f0003b");
     }
  
     public void generar_tabla_alfabeto(){
@@ -439,27 +463,11 @@ public class Scanner {
        Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("muro_ladrillos.html")));
        
        writer.write(inicio_html);
-       while(true){
-           if(tokens_cantidad < largo_tokens){
-               if(contador == 5){
-                   writer.write("<span style='background-color: "+paleta_colores.get(lista_tokens.get(tokens_cantidad).codigo_familia)+"'>"+lista_tokens.get(tokens_cantidad).lexema+"</span>\n");
-                   contador = 0;
-                   writer.write("</p>\n");
-                   tokens_cantidad++;
-               }else if(contador == 0){
-                   writer.write("<p>\n");
-                   writer.write("<span style='background-color: "+paleta_colores.get(lista_tokens.get(tokens_cantidad).codigo_familia)+"'>"+lista_tokens.get(tokens_cantidad).lexema+"</span>\n");
-                   contador++;
-                   tokens_cantidad++;
-               }else{
-                    writer.write("<span style='background-color: "+paleta_colores.get(lista_tokens.get(tokens_cantidad).codigo_familia)+"'>"+lista_tokens.get(tokens_cantidad).lexema+"</span>\n");
-                   contador++;
-                   tokens_cantidad++;
-               }
-           }else{
-               break;
-           }    
+       //writer.write("<p>\n");
+       for(int i = 0; i < largo_tokens; i++){
+            writer.write("<span style='background-color: "+paleta_colores.get(lista_tokens.get(i).codigo_familia)+"'>"+lista_tokens.get(i).lexema+"</span>\n");
        }
+       //writer.write("<p>\n");
        writer.write(final_html);
        writer.close();
    }
