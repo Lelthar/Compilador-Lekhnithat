@@ -1,8 +1,8 @@
-/\ Este es un comentario de linea
-<* Este uno de bloque que debe trabajar anidado *>
-12A
-
-Hake MegaEjemplo .
+ars..Σ /\ Este es un comentario de linea
+<* Esta uno de bloque que debe trabajar anidado *>
+12A.awd
+12:12,
+Hake MegaEjemplo . <* . , :*>
 
 /\ Seccion de constantes
 Evoon	
@@ -22,7 +22,8 @@ Esinasolat
    E, F, G shim yorosor := 3 . /\ E, F y G quedan inicializadas con 3 las tres!
    H shim akat := sek .        /\ H es una variable booleana inicializada con true.
    I,J,K shim yanqokh := { }.  /\ I, J y K son conjuntos, los tres quedan inicializados con vacio.
-
+   AR1 shim Khalassar [5][4][3] akat.  /\ Matriz tridimensional de booleanos llamada AR1 y sin inicializar.
+   AR2 shim Khalassar [4][2] yorosor := [[1,2],[3,4],[5,6],[7,8]] .   
    R1 shim Marilat  
               campo1 shim yorosor .
               campo2 shim akat .
@@ -44,13 +45,13 @@ Khado
 
 /\ Punto de entrada del programa
 Evolat
-  B := C @ 0 . /\ le asigna al caracter B el primer elemento del string C
+  B := C@0 . /\ le asigna al caracter B el primer elemento del string C
   A += yath A + yath A .
 
   <* Operaciones sobre strings *>
 
-  C:= "HOLA" |><| " MUNDO" .  /\ Concatenar
-  D:= C|>3:5<| .   /\  Cortar, en D quedaria "A MUN" 
+  C:= "HOLA"|><| " MUNDO" .  /\ Concatenar
+  D:= CA|>3:5<| .   /\  Cortar, en D quedaria "A MUN" 
   D:= C|<3:5>| .   /\  Recortar, en D quedaria "HOLDO"
   A:= C|*'M' | .   /\  Buscar: En A queda un 5, la primera posicion donde en C hay una M.  1 si no esta.
 

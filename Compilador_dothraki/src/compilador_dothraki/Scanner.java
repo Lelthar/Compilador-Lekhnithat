@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 /**
@@ -75,63 +76,53 @@ public class Scanner {
                    deme_siguiente_caracter();
          
                    if(caracter_actual > 0){
+                        if(alfabeto.containsKey(caracter_actual)){
+                            estado_actual = tabla_transiciones[estado_actual][alfabeto.get(caracter_actual)];
+                        }else{
+                            estado_actual = 467;
+                        }
                         
-                        estado_actual = tabla_transiciones[estado_actual][alfabeto.get(caracter_actual)];
-       
                         if(estado_actual < 125){ //Pone el tamaño de los terminales
+                           
 
-                            if(bandera_token && lexema.length() > 1 && (caracter_actual != ' ' && caracter_actual != '\t' && caracter_actual != '\n' && caracter_actual != (char) 39 && caracter_actual != (char) 34)){
-     
-                                bandera_token = false;
-                                deme_token();
-                        
-                                estado_actual = 130; //Le pone el estado inicial
-                                lexema = "";
-                                lexema += caracter_actual;
-                                tome_este_caracter();
-                                caracter_actual = 0;
-                            }else if(bandera_token){
-                                bandera_token = true;
-
-                                if((caracter_actual != ' ' && caracter_actual != '\t' && caracter_actual != '\n')){
-                                    lexema += caracter_actual;
-                                }
-
-                                deme_token();
-
-                                estado_actual = 130; //Le pone el estado inicial
-                                lexema = "";
-
-                                //this.columna++;
-                                caracter_actual = 0;
-
-                            }else{
-                                this.columna++;
-                                bandera_token = true;
-                                //lexema += caracter_actual;
+                            if(caracter_actual == ' ' || caracter_actual == '\t' || caracter_actual == '\n'){
+                               
                                 deme_token();
 
                                 estado_actual = 130; //Le pone el estado inicial
                                 lexema = "";
                                 
                                 caracter_actual = 0;
+                                
+                                if(this.buffer.charAt(this.posicion) == ' '){
+                                    this.columna += 1;
+
+                                }else if(buffer.charAt(this.posicion) == '\t'){
+                                    this.columna += 4;
+
+                                }else if(this.buffer.charAt(this.posicion) == '\n'){
+                                    this.lineas += 1;
+
+                                    this.columna = 0;
+                                }
+                               
+                            }else{
+                                
+                                deme_token();
+                        
+                                estado_actual = 130; //Le pone el estado inicial
+                                lexema = "";
+                                tome_este_caracter();
+                                caracter_actual = 0;
+                                
+                                
 
                             }
-                            if(this.buffer.charAt(this.posicion) == ' '){
-                                this.columna += 1;
-
-                            }else if(buffer.charAt(this.posicion) == '\t'){
-                                this.columna += 4;
-
-                            }else if(this.buffer.charAt(this.posicion) == '\n'){
-                                this.lineas += 1;
-
-                                this.columna = 0;
-                            }
-                        }else if(estado_actual > 452){
-
-                            lexema += caracter_actual;
                             
+                        }else if(estado_actual > 467){
+
+                            //lexema += caracter_actual;
+                           
                             codigo_error = 1;
 
                             deme_token();
@@ -141,8 +132,9 @@ public class Scanner {
                             
                             codigo_error = 0;
 
-                            //this.columna++;
+                            tome_este_caracter();
                             caracter_actual = 0;
+                                
                         }else{
                             lexema += caracter_actual;
                             this.columna++;
@@ -164,6 +156,8 @@ public class Scanner {
             for(int i = 0; i < lista_tokens.size(); i++){
                 System.out.println(lista_tokens.get(i).toString());
             }
+            
+            System.out.println(tabla_transiciones[125][27]);
 
        }else{
            System.out.println("Error en la extensión del archivo introducido");
@@ -196,7 +190,7 @@ public class Scanner {
     }
 
     public void tome_este_caracter(){
-
+       //lexema += caracter_actual;
        this.posicion--;
     }
 
@@ -414,7 +408,7 @@ public class Scanner {
     }
     
    public int[][] obtener_tabla_transiciones() throws IOException{
-        int[][] resultado = new int[461][71];
+        int[][] resultado = new int[472][71];
         try (
         BufferedReader br = new BufferedReader(new FileReader("src/compilador_dothraki/testfile.txt"))) {
         String line;
