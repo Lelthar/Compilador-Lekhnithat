@@ -152,12 +152,13 @@ public class Scanner {
                     deme_token();
                 }
             }
-           generar_muro_ladrillos();
-            for(int i = 0; i < lista_tokens.size(); i++){
+            Token token = new Token(129,"EOF",this.lineas,this.columna++,this.columna++,0);
+            this.lista_tokens.add(token);
+            generar_muro_ladrillos();
+            /*for(int i = 0; i < lista_tokens.size(); i++){
                 System.out.println(lista_tokens.get(i).toString());
-            }
-            
-            System.out.println(tabla_transiciones[125][27]);
+            }*/
+           
 
        }else{
            System.out.println("Error en la extensión del archivo introducido");
