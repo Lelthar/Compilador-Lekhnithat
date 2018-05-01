@@ -5,8 +5,8 @@
  *
  * Archivo generado por GikGram 2.0
  *
- * Copyright © Olminsky 2011 Derechos reservados
- * Reproducción sin fines de lucro permitida
+ * Copyright ï¿½ Olminsky 2011 Derechos reservados
+ * Reproducciï¿½n sin fines de lucro permitida
  */
 
 package Gramatica;
@@ -14,43 +14,43 @@ package Gramatica;
 /**
  * Esta clase contiene:
  * - Constantes necesarias para el driver de parsing
- * - Constantes con las rutinas semánticas
- * - Y los métodos necesarios para el driver de parsing
+ * - Constantes con las rutinas semï¿½nticas
+ * - Y los mï¿½todos necesarios para el driver de parsing
  */
 public abstract class Gramatica
 {
-	/* Esta es la única clase que se accede fuera del paquete Gramatica */
+	/* Esta es la ï¿½nica clase que se accede fuera del paquete Gramatica */
 
 	/**
-	 * Constante que contiene el código de familia del terminal de fin de archivo
+	 * Constante que contiene el cï¿½digo de familia del terminal de fin de archivo
 	 */
 	public static final int MARCA_DERECHA = 111;
 
 	/**
-	 * Constante que contiene el número del no-terminal inicial
-	 * (el primer no-terminal que aparece en la gramática)
+	 * Constante que contiene el nï¿½mero del no-terminal inicial
+	 * (el primer no-terminal que aparece en la gramï¿½tica)
 	 */
 	public static final int NO_TERMINAL_INICIAL = 112;
 
 	/**
-	 * Constante que contiene el número máximo de columnas que tiene los lados derechos
+	 * Constante que contiene el nï¿½mero mï¿½ximo de columnas que tiene los lados derechos
 	 */
 	public static final int MAX_LADO_DER = 10;
 
 	/**
-	 * Constante que contiene el número máximo de follows
+	 * Constante que contiene el nï¿½mero mï¿½ximo de follows
 	 */
 	public static final int MAX_FOLLOWS = 28;
 
-	/* Constantes con las rutinas semánticas */
-	/* NO SE DETECTARON SÍMBOLOS SEMÁNTICOS EN LA GRAMÁTICA */
+	/* Constantes con las rutinas semï¿½nticas */
+	/* NO SE DETECTARON Sï¿½MBOLOS SEMï¿½NTICOS EN LA GRAMï¿½TICA */
 
 	/**
-	 * Método esTerminal
-			Devuelve true si el símbolo es un terminal
+	 * Mï¿½todo esTerminal
+			Devuelve true si el sï¿½mbolo es un terminal
 			o false de lo contrario
 	 * @param numSimbolo
-			Número de símbolo
+			Nï¿½mero de sï¿½mbolo
 	 */
 	public static final boolean esTerminal(int numSimbolo)
 	{
@@ -58,11 +58,11 @@ public abstract class Gramatica
 	}
 
 	/**
-	 * Método esNoTerminal
-			Devuelve true si el símbolo es un no-terminal
+	 * Mï¿½todo esNoTerminal
+			Devuelve true si el sï¿½mbolo es un no-terminal
 			o false de lo contrario
 	 * @param numSimbolo
-			Número de símbolo
+			Nï¿½mero de sï¿½mbolo
 	 */
 	public static final boolean esNoTerminal(int numSimbolo)
 	{
@@ -70,12 +70,12 @@ public abstract class Gramatica
 	}
 
 	/**
-	 * Método esSimboloSemantico
-			Devuelve true si el símbolo es un símbolo semántico
-			(incluyendo los símbolos de generación de código)
+	 * Mï¿½todo esSimboloSemantico
+			Devuelve true si el sï¿½mbolo es un sï¿½mbolo semï¿½ntico
+			(incluyendo los sï¿½mbolos de generaciï¿½n de cï¿½digo)
 			o false de lo contrario
 	 * @param numSimbolo
-			Número de símbolo
+			Nï¿½mero de sï¿½mbolo
 	 */
 	public static final boolean esSimboloSemantico(int numSimbolo)
 	{
@@ -83,25 +83,25 @@ public abstract class Gramatica
 	}
 
 	/**
-	 * Método getTablaParsing
-			Devuelve el número de regla contenida en la tabla de parsing
+	 * Mï¿½todo getTablaParsing
+			Devuelve el nï¿½mero de regla contenida en la tabla de parsing
 	 * @param numNoTerminal
-			Número del no-terminal
+			Nï¿½mero del no-terminal
 	 * @param numTerminal
-			Número del terminal
+			Nï¿½mero del terminal
 	 */
 	public static final int getTablaParsing(int numNoTerminal, int numTerminal)
-	{
+	{   
 		return GTablaParsing.getTablaParsing(numNoTerminal, numTerminal);
 	}
 
 	/**
-	 * Método getLadosDerechos
-			Obtiene un símbolo del lado derecho de la regla
+	 * Mï¿½todo getLadosDerechos
+			Obtiene un sï¿½mbolo del lado derecho de la regla
 	 * @param numRegla
-			Número de regla
+			Nï¿½mero de regla
 	 * @param numColumna
-			Número de columna
+			Nï¿½mero de columna
 	 */
 	public static final int getLadosDerechos(int numRegla, int numColumna)
 	{
@@ -109,10 +109,10 @@ public abstract class Gramatica
 	}
 
 	/**
-	 * Método getNombresTerminales
+	 * Mï¿½todo getNombresTerminales
 			Obtiene el nombre del terminal
 	 * @param numTerminal
-			Número del terminal
+			Nï¿½mero del terminal
 	 */
 	public static final String getNombresTerminales(int numTerminal)
 	{
@@ -120,12 +120,12 @@ public abstract class Gramatica
 	}
 
 	/**
-	 * Método getTablaFollows
-			Obtiene el número de terminal del follow del no-terminal
+	 * Mï¿½todo getTablaFollows
+			Obtiene el nï¿½mero de terminal del follow del no-terminal
 	 * @param numNoTerminal
-			Número de no-terminal
+			Nï¿½mero de no-terminal
 	 * @param numColumna
-			Número de columna
+			Nï¿½mero de columna
 	 */
 	public static final int getTablaFollows(int numNoTerminal, int numColumna)
 	{

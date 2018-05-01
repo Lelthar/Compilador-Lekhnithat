@@ -23,7 +23,7 @@ import java.util.HashMap;
  */
 public class Scanner {
     public ArrayList<Token> lista_tokens; 
-    public String archivo_nombre = "prueba.txt";
+    public String archivo_nombre;
     public int lineas;
     public int columna;
     public int estado_actual;
@@ -40,17 +40,18 @@ public class Scanner {
     public int codigo_error;
 
     
-    public Scanner() throws IOException {
+    public Scanner(String archivo) throws IOException {
         lista_tokens = new ArrayList<>();
         alfabeto = new HashMap<Character,Integer>();
         generar_tabla_alfabeto();
         tabla_transiciones = obtener_tabla_transiciones();
         paleta_colores = new HashMap<Integer,String>();
         generar_paleta_colores();
+        archivo_nombre = archivo;
     }
          
-    public void Inicializar_scanner(String archivo) throws FileNotFoundException, IOException{
-       archivo_nombre = archivo;
+    public void Inicializar_scanner() throws FileNotFoundException, IOException{
+       
        if(archivo_nombre.endsWith(".lht")){
            lineas = 0;
            columna = 0;
@@ -61,7 +62,7 @@ public class Scanner {
            boolean bandera_token = true;
 
            buffer_size = new byte[1024];
-           file = new FileInputStream(archivo); 
+           file = new FileInputStream(archivo_nombre); 
            largo = -1;
            lexema = "";
            estado_actual = 130;

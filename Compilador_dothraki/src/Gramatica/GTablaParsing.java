@@ -5,21 +5,21 @@
  *
  * Archivo generado por GikGram 2.0
  *
- * Copyright © Olminsky 2011 Derechos reservados
- * Reproducción sin fines de lucro permitida
+ * Copyright ï¿½ Olminsky 2011 Derechos reservados
+ * Reproducciï¿½n sin fines de lucro permitida
  */
 
 package Gramatica;
 
 /**
  * Esta clase contiene la tabla de parsing
- * y los métodos necesarios para acceder a ella
+ * y los mï¿½todos necesarios para acceder a ella
  */
 abstract class GTablaParsing
 {
 	/**
 	 * Tabla de parsing
-	 * Contiene los números de regla que hay que ejecutar
+	 * Contiene los nï¿½meros de regla que hay que ejecutar
 	 * con base a los no-terminales (filas) y los terminales (columnas)
 	 */
 	private static final int[][] TablaParsing =
@@ -129,12 +129,12 @@ abstract class GTablaParsing
 	};
 
 	/**
-	 * Método getTablaParsing
-			Devuelve el número de regla contenida en la tabla de parsing
+	 * Mï¿½todo getTablaParsing
+			Devuelve el nï¿½mero de regla contenida en la tabla de parsing
 	 * @param numNoTerminal
-			Número del no-terminal
+			Nï¿½mero del no-terminal
 	 * @param numTerminal
-			Número del terminal
+			Nï¿½mero del terminal
 	 */
 	static final int getTablaParsing(int numNoTerminal, int numTerminal)
 	{

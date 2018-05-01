@@ -5,21 +5,21 @@
  *
  * Archivo generado por GikGram 2.0
  *
- * Copyright © Olminsky 2011 Derechos reservados
- * Reproducción sin fines de lucro permitida
+ * Copyright ï¿½ Olminsky 2011 Derechos reservados
+ * Reproducciï¿½n sin fines de lucro permitida
  */
 
 package Gramatica;
 
 /**
  * Esta clase contiene la tabla de lados derechos
- * y los métodos necesarios para acceder a ella
+ * y los mï¿½todos necesarios para acceder a ella
  */
 abstract class GLadosDerechos
 {
 	/**
 	 * Tabla de lados derechos
-	 * Contiene el lado derecho de las reglas de la gramática
+	 * Contiene el lado derecho de las reglas de la gramï¿½tica
 	 */
 	private static final int[][] LadosDerechos =
 	{
@@ -245,12 +245,12 @@ abstract class GLadosDerechos
 	};
 
 	/**
-	 * Método getLadosDerechos
-			Obtiene un símbolo del lado derecho de la regla
+	 * Mï¿½todo getLadosDerechos
+			Obtiene un sï¿½mbolo del lado derecho de la regla
 	 * @param numRegla
-			Número de regla
+			Nï¿½mero de regla
 	 * @param numColumna
-			Número de columna
+			Nï¿½mero de columna
 	 */
 	static final int getLadosDerechos(int numRegla, int numColumna)
 	{

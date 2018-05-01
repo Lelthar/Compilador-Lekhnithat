@@ -19,9 +19,10 @@ public class Compilador_dothraki {
      */
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
-        Scanner scanner = new Scanner();
-        scanner.Inicializar_scanner("prueba.lht");
-        
+        Scanner scanner = new Scanner("prueba.lht");
+        scanner.Inicializar_scanner();
+        Parser parser = new Parser(scanner.lista_tokens);
+        parser.iniciar_parsing();
     }
     
 }
