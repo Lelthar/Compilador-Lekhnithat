@@ -56,7 +56,8 @@ public class Parser {
                     System.out.println("Error sintactico");
                 }else{
                     int i = 0;
-                    while((Gramatica.getLadosDerechos(regla,i)) > -1 && (i < Gramatica.MAX_LADO_DER)){                       
+                    while((Gramatica.getLadosDerechos(regla,i)) > -1 && (i < Gramatica.MAX_LADO_DER)){
+                        System.out.println("Reglas introducidas");
                         push_pila_parsing(pila_parsing, Gramatica.getLadosDerechos(regla,i++));
                     }
                 }
