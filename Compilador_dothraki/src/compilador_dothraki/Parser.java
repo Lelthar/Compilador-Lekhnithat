@@ -22,7 +22,6 @@ public class Parser {
     
     public Parser(ArrayList<Token> pLista_tokens) {
         lista_tokens = pLista_tokens;
-        System.out.println(lista_tokens.size());
         pila_parsing = new ArrayList<>();
         token_actual = null;
         eof_familia = 129;
@@ -30,18 +29,13 @@ public class Parser {
     }
     
     public void iniciar_parsing(){
-        int indice_lista_token = 0; //contador de la biblioteca de tokens
-        
-        token_actual = lista_tokens.get(indice_lista_token); //Obtiene el primer token
-        
-        push_pila_parsing(pila_parsing,Gramatica.NO_TERMINAL_INICIAL); //pushea el numero del no terminal inicial
-        
-        while(token_actual.codigo_familia != eof_familia){ // mientras no encuentre el EOF
-            elemento_actual_proceso = pop_pila_parsing(pila_parsing); //obtiene el numero que del primer no terminal
-            
-            if(Gramatica.esTerminal(elemento_actual_proceso)){ //si el elemento es terminal
-                System.out.println("Terminal");
-                if(elemento_actual_proceso ==  token_actual.codigo_familia){
+        int indice_lista_token = 0;
+        token_actual = lista_tokens.get(indice_lista_token);
+        push_pila_parsing(pila_parsing,Gramatica.NO_TERMINAL_INICIAL);
+        while(token_actual.codigo_familia != eof_familia){
+            elemento_actual_proceso = pop_pila_parsing(pila_parsing);
+            if(Gramatica.esTerminal(elemento_actual_proceso)){
+                if(elemento_actual_proceso == token_actual.codigo_familia){
                     indice_lista_token++;
                     token_actual = lista_tokens.get(indice_lista_token);
                 }else{
@@ -50,14 +44,13 @@ public class Parser {
                     System.out.println("Error");
                 }
             }else{
-                System.out.println("No-Terminal");
+
                 regla = Gramatica.getTablaParsing((elemento_actual_proceso-Gramatica.NO_TERMINAL_INICIAL), token_actual.codigo_familia);
                 if(regla < 0){
                     System.out.println("Error sintactico");
                 }else{
                     int i = 0;
-                    while((Gramatica.getLadosDerechos(regla,i)) > -1 && (i < Gramatica.MAX_LADO_DER)){
-                        System.out.println("Reglas introducidas");
+                    while(Gramatica.getLadosDerechos(regla,i) > -1 && i < Gramatica.MAX_LADO_DER){
                         push_pila_parsing(pila_parsing, Gramatica.getLadosDerechos(regla,i++));
                     }
                 }
