@@ -1,0 +1,233 @@
+/*
+ * predict.txt
+ *
+ * Formato:
+ * 	no-terminal terminal [ ...terminal]
+ *
+ * 2018/04/30 18:15:24
+ *
+ * Archivo generado por GikGram 2.0
+ *
+ * Copyright © Olminsky 2011 Derechos reservados
+ * Reproducción sin fines de lucro permitida
+ */
+
+<S> Hake 
+<bloqueConstantes> Evolat Khado Khadokh Esinasolat Veneser 
+<bloqueConstantes> Evoon 
+<nuevaConstante> ID 
+<nuevaConstante> Evolat Khado Khadokh Esinasolat Veneser 
+<asignarConstate> literalEntero literalChar literalString sek vos 
+<asignarConstate> { 
+<asignarConstate> [ 
+<asignarConstate> << 
+<inicializarConjuntoConst> { 
+<inicializarArregloCons> [ 
+<inicializarCamposCons> << 
+<bloqueTipos> Evolat Khado Khadokh Esinasolat 
+<bloqueTipos> Veneser 
+<nuevoTipo> ID 
+<nuevoTipo> Evolat Khado Khadokh Esinasolat 
+<asignarTipo> literalEntero literalChar literalString sek vos 
+<asignarTipo> Yanqokh 
+<asignarTipo> Khalassar 
+<asignarTipo> Marilat 
+<bloqueVariable> Evolat Khado Khadokh 
+<bloqueVariable> Esinasolat 
+<nuevaVariable> ID 
+<nuevaVariable> Evolat Khado Khadokh 
+<asignarVariable> Yorosor Lirikh Laqat Akat 
+<asignarVariable> Yanqokh 
+<asignarVariable> Khalassar 
+<asignarVariable> Marilat 
+<inicializacionConjunto> := 
+<valorConjunto> literalEntero literalChar literalString sek vos 
+<valorConjunto> } 
+<agregarID> , 
+<agregarID> Shim 
+<inicializacionVariable> := 
+<inicializacionVariable> . 
+<crearDimensionalidad> [ 
+<agregarDemension> [ 
+<agregarDemension> Yorosor Lirikh Laqat Akat 
+<inicializacionArreglo> debug 
+<crearArreglo> [ 
+<crearArreglo> literalEntero literalChar literalString sek vos , ] 
+<agregarNivel> [ 
+<agrandarNivel> , 
+<agrandarNivel> ] 
+<valorArreglo> literalEntero literalChar literalString sek vos 
+<valorArreglo> , 
+<valorArreglo> ] 
+<crearRegistros> ID Hethkat 
+<crearCampo> ID 
+<crearCampo> Hethkat 
+<asignarCampo> Yorosor Lirikh Laqat Akat 
+<asignarCampo> Khalassar 
+<asignarCampo> Marilat 
+<inicializarCampos> := 
+<inicializarCampos> . 
+<valorCampo> , 
+<valorCampo> >> 
+<bloquePrototipos> Evolat Khado 
+<bloquePrototipos> Khadokh 
+<nuevoPrototipo> assokh 
+<nuevoPrototipo> thikh 
+<nuevoPrototipo> Evolat Khado 
+<bloqueRutinas> Evolat 
+<bloqueRutinas> Khado 
+<nuevaRutina> assokh 
+<nuevaRutina> thikh 
+<nuevaRutina> Evolat 
+<definicionFuncion> assokh 
+<definicionProcedimiento> thikh 
+<parametrosFormales> esin 
+<parametrosFormales> ID 
+<parametrosFormales> ) 
+<parametrosReales> ID 
+<parametrosReales> ) 
+<agregarParametrosReales> , 
+<agregarParametrosReales> ) 
+<inicioPrograma> Evolat 
+<instrucciones> ID kash evat iste ha she save soro verat yarat sille irge charat 
+<instrucciones> nakho arrekVos arrekSek .  EOF  
+<instruccion> ID 
+<instruccion> kash 
+<instruccion> evat 
+<instruccion> iste 
+<instruccion> ha 
+<instruccion> she 
+<instruccion> save 
+<instruccion> soro 
+<instruccion> verat 
+<instruccion> yarat sille irge charat 
+<instruccionWHILE> kash 
+<bloqueInstrucciones> evat 
+<instruccionIF> iste 
+<valorCondicional> arrekSek 
+<valorCondicional> arrekVos 
+<valorCondicionalSek> arrekVos 
+<valorCondicionalSek> . 
+<valorCondicionalVos> arrekSek 
+<valorCondicionalVos> . 
+<instruccionFor> ha 
+<InstruccionWith> she 
+<instruccionRepeat> save 
+<instruccionHalt> soro 
+<instruccionesSencillas> yarat 
+<instruccionesSencillas> sille 
+<instruccionesSencillas> irge 
+<instruccionesSencillas> charat 
+<asignacionFamilia> := 
+<asignacionFamilia> += 
+<asignacionFamilia> -= 
+<asignacionFamilia> *= 
+<asignacionFamilia> /= 
+<asignacionFamilia> %= 
+<sistemaAsignacion> := += -= *= /= %= 
+<valorQueAsigna> [ 
+<valorQueAsigna> { 
+<valorQueAsigna> << 
+<valorQueAsigna> yath zohhe athzhokwazar 
+<sistemaAsignacionVariables> ID 
+<sistemaAsignacionVariables> |< |> |><| |* 
+<sistemaAsignacionVariables> <_> <^> <&> <#> 
+<sistemaAsignacionVariables> { %+ %- %? %! 
+<sistemaAsignacionVariables> expresion vo 
+<sistemaAsignacionVariables> asolat 
+<sistemaAsignacionVariables> literalEntero literalChar literalString sek vos 
+<sistemaAsignacionVariables> ! 
+<operacionAcceso> @ 
+<operacionAcceso> -> 
+<operacionAcceso> [ 
+<accesoString> @ 
+<accesoRegistro> -> 
+<accesoArreglos> [ 
+<masDimension> [ 
+<masDimension> // * % + - > >= < <= = <> && || ma vo 
+<SizeOF> athzhokwazar 
+<operacionesStr> |< |> |><| |* 
+<tipoOperacionStr> |< |> 
+<tipoOperacionStr> |><| 
+<tipoOperacionStr> |* 
+<operacionesStringVarias> |< 
+<operacionesStringVarias> |> 
+<literalesOperacionString> literalString 
+<literalesOperacionStringChar> literalChar 
+<operacionesChar> <_> <^> <&> <#> 
+<operacionChar> <_> 
+<operacionChar> <^> 
+<operacionChar> <&> 
+<operacionChar> <#> 
+<operacionConjunto> { %+ %- %? %! 
+<operacionesConjuntos> { 
+<operacionesConjuntos> %+ %- %? 
+<operacionesConjuntos> %! 
+<literalesConjuntosVar> { 
+<operacionesConjuntosVar> %& 
+<operacionesConjuntosVar> %~ 
+<operacionesConjuntosChar> %+ 
+<operacionesConjuntosChar> %- 
+<operacionesConjuntosChar> %? 
+<operacionLogica> expresion vo 
+<operacionesLogicas> expresion 
+<operacionesLogicas> vo 
+<operadorLogico> ma 
+<operadorLogico> che 
+<operadorLogico> xche 
+<expresion> yath zohhe athzhokwazar 
+<expresionID> ( 
+<expresionID> ID |< |> |><| |* <_> <^> <&> <#> { %+ %- %? %! expresion vo asolat literalEntero literalChar literalString sek vos ! 
+<addExpresionMulDivCom> // * % 
+<addExpresionMulDivCom> + - > >= < <= = <> && || ma vo tat ) emralat akko : >| <| . 
+<addExpresioSumRes> + - 
+<addExpresioSumRes> > >= < <= = <> && || ma vo tat ) emralat akko : >| <| . 
+<addExpresionCondicional> > >= < <= = <> 
+<addExpresionCondicional> && || ma vo tat ) emralat akko : >| <| . 
+<addExpresionLogicaD> && || 
+<addExpresionLogicaD> ma vo tat ) emralat akko : >| <| . 
+<addExpresionLogica> ma vo 
+<addExpresionLogica> tat ) emralat akko : >| <| . 
+<OperacionComparacion> > 
+<OperacionComparacion> >= 
+<OperacionComparacion> < 
+<OperacionComparacion> <= 
+<OperacionComparacion> = 
+<OperacionComparacion> <> 
+<OperacionCondicionalLogica> && 
+<OperacionCondicionalLogica> || 
+<OperacionCondicional> ma 
+<OperacionCondicional> vo 
+<sumRest> + 
+<sumRest> - 
+<mulDivCom> // 
+<mulDivCom> * 
+<mulDivCom> % 
+<operacionUnitaria> yath zohhe 
+<operacionUnitaria> athzhokwazar 
+<IncreDecremento> yath 
+<IncreDecremento> zohhe 
+<tipo> Yorosor 
+<tipo> Lirikh 
+<tipo> Laqat 
+<tipo> Akat 
+<tipoCompleto> Yanqokh 
+<tipoCompleto> Khalassar 
+<tipoCompleto> Marilat 
+<tipoCompleto> Yorosor Lirikh Laqat Akat 
+<VALOR> literalEntero 
+<VALOR> literalChar 
+<VALOR> literalString 
+<VALOR> sek vos 
+<literalBoleana> sek 
+<literalBoleana> vos 
+<valorRetorno> Yanqokh Khalassar Marilat Yorosor Lirikh Laqat Akat 
+<valorRetorno> . 
+<manejoSalida> charat 
+<manejoEntrada> asolat 
+<cohersionTipos> ! 
+<instruccionSwitch> verat 
+<casos> nakhaan nakho 
+<casos> gache 
+<valorDefault> nakhaan 
+<valorDefault> nakho 

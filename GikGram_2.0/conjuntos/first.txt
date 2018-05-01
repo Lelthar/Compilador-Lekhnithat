@@ -1,0 +1,116 @@
+/*
+ * first.txt
+ *
+ * Formato:
+ * 	no-terminal terminal [ ...terminal]
+ *
+ * 2018/04/30 18:15:24
+ *
+ * Archivo generado por GikGram 2.0
+ *
+ * Copyright © Olminsky 2011 Derechos reservados
+ * Reproducción sin fines de lucro permitida
+ */
+
+<S> Hake 
+<bloqueConstantes> Evolat Khado Khadokh Esinasolat Veneser Evoon 
+<nuevaConstante> ID 
+<asignarConstate> literalEntero literalChar literalString sek vos { [ << 
+<inicializarConjuntoConst> { 
+<inicializarArregloCons> [ 
+<inicializarCamposCons> << 
+<bloqueTipos> Evolat Khado Khadokh Esinasolat Veneser 
+<nuevoTipo> ID 
+<asignarTipo> literalEntero literalChar literalString sek vos Yanqokh Khalassar Marilat 
+<bloqueVariable> Evolat Khado Khadokh Esinasolat 
+<nuevaVariable> ID 
+<asignarVariable> Yorosor Lirikh Laqat Akat Yanqokh Khalassar Marilat 
+<inicializacionConjunto> := 
+<valorConjunto> literalEntero literalChar literalString sek vos 
+<agregarID> , 
+<inicializacionVariable> := . 
+<crearDimensionalidad> [ 
+<agregarDemension> [ 
+<inicializacionArreglo> debug 
+<crearArreglo> [ literalEntero literalChar literalString sek vos , 
+<agregarNivel> [ 
+<agrandarNivel> , 
+<valorArreglo> literalEntero literalChar literalString sek vos , 
+<crearRegistros> ID Hethkat 
+<crearCampo> ID 
+<asignarCampo> Yorosor Lirikh Laqat Akat Khalassar Marilat 
+<inicializarCampos> := 
+<valorCampo> , 
+<bloquePrototipos> Evolat Khado Khadokh 
+<nuevoPrototipo> assokh thikh 
+<bloqueRutinas> Evolat Khado 
+<nuevaRutina> assokh thikh 
+<definicionFuncion> assokh 
+<definicionProcedimiento> thikh 
+<parametrosFormales> esin ID 
+<parametrosReales> ID 
+<agregarParametrosReales> , 
+<inicioPrograma> Evolat 
+<instrucciones> ID kash evat iste ha she save soro verat yarat sille irge charat 
+<instruccion> ID kash evat iste ha she save soro verat yarat sille irge charat 
+<instruccionWHILE> kash 
+<bloqueInstrucciones> evat 
+<instruccionIF> iste 
+<valorCondicional> arrekSek arrekVos 
+<valorCondicionalSek> arrekVos 
+<valorCondicionalVos> arrekSek 
+<instruccionFor> ha 
+<InstruccionWith> she 
+<instruccionRepeat> save 
+<instruccionHalt> soro 
+<instruccionesSencillas> yarat sille irge charat 
+<asignacionFamilia> := += -= *= /= %= 
+<sistemaAsignacion> := += -= *= /= %= 
+<valorQueAsigna> [ { << yath zohhe athzhokwazar 
+<sistemaAsignacionVariables> ID |< |> |><| |* <_> <^> <&> <#> { %+ %- %? %! expresion vo asolat literalEntero literalChar literalString sek vos ! 
+<operacionAcceso> @ -> [ 
+<accesoString> @ 
+<accesoRegistro> -> 
+<accesoArreglos> [ 
+<masDimension> [ 
+<SizeOF> athzhokwazar 
+<operacionesStr> |< |> |><| |* 
+<tipoOperacionStr> |< |> |><| |* 
+<operacionesStringVarias> |< |> 
+<literalesOperacionString> literalString 
+<literalesOperacionStringChar> literalChar 
+<operacionesChar> <_> <^> <&> <#> 
+<operacionChar> <_> <^> <&> <#> 
+<operacionConjunto> { %+ %- %? %! 
+<operacionesConjuntos> { %+ %- %? %! 
+<literalesConjuntosVar> { 
+<operacionesConjuntosVar> %& %~ 
+<operacionesConjuntosChar> %+ %- %? 
+<operacionLogica> expresion vo 
+<operacionesLogicas> expresion vo 
+<operadorLogico> ma che xche 
+<expresion> yath zohhe athzhokwazar 
+<expresionID> ( ID |< |> |><| |* <_> <^> <&> <#> { %+ %- %? %! expresion vo asolat literalEntero literalChar literalString sek vos ! 
+<addExpresionMulDivCom> // * % + - > >= < <= = <> && || ma vo 
+<addExpresioSumRes> + - > >= < <= = <> && || ma vo 
+<addExpresionCondicional> > >= < <= = <> && || ma vo 
+<addExpresionLogicaD> && || ma vo 
+<addExpresionLogica> ma vo 
+<OperacionComparacion> > >= < <= = <> 
+<OperacionCondicionalLogica> && || 
+<OperacionCondicional> ma vo 
+<sumRest> + - 
+<mulDivCom> // * % 
+<operacionUnitaria> yath zohhe athzhokwazar 
+<IncreDecremento> yath zohhe 
+<tipo> Yorosor Lirikh Laqat Akat 
+<tipoCompleto> Yanqokh Khalassar Marilat Yorosor Lirikh Laqat Akat 
+<VALOR> literalEntero literalChar literalString sek vos 
+<literalBoleana> sek vos 
+<valorRetorno> Yanqokh Khalassar Marilat Yorosor Lirikh Laqat Akat 
+<manejoSalida> charat 
+<manejoEntrada> asolat 
+<cohersionTipos> ! 
+<instruccionSwitch> verat 
+<casos> gache 
+<valorDefault> nakhaan 

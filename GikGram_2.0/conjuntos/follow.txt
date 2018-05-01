@@ -1,0 +1,116 @@
+/*
+ * follow.txt
+ *
+ * Formato:
+ * 	no-terminal terminal [ ...terminal]
+ *
+ * 2018/04/30 18:15:24
+ *
+ * Archivo generado por GikGram 2.0
+ *
+ * Copyright © Olminsky 2011 Derechos reservados
+ * Reproducción sin fines de lucro permitida
+ */
+
+<S>  EOF  
+<bloqueConstantes>  EOF  
+<nuevaConstante> Evolat Khado Khadokh Esinasolat Veneser 
+<asignarConstate> . 
+<inicializarConjuntoConst> // * % + - > >= < <= = <> && || ma vo %& %~ . 
+<inicializarArregloCons> . 
+<inicializarCamposCons> . 
+<bloqueTipos>  EOF  
+<nuevoTipo> Evolat Khado Khadokh Esinasolat 
+<asignarTipo> . 
+<bloqueVariable>  EOF  
+<nuevaVariable> Evolat Khado Khadokh 
+<asignarVariable> . 
+<inicializacionConjunto> . 
+<valorConjunto> } 
+<agregarID> Shim 
+<inicializacionVariable> . 
+<crearDimensionalidad> Yorosor Lirikh Laqat Akat 
+<agregarDemension> Yorosor Lirikh Laqat Akat 
+<inicializacionArreglo> Yorosor Lirikh Laqat Akat . 
+<crearArreglo> ] 
+<agregarNivel> ] 
+<agrandarNivel> ] 
+<valorArreglo> ] 
+<crearRegistros> . := 
+<crearCampo> Hethkat 
+<asignarCampo> . 
+<inicializarCampos> . 
+<valorCampo> >> 
+<bloquePrototipos>  EOF  
+<nuevoPrototipo> Evolat Khado 
+<bloqueRutinas>  EOF  
+<nuevaRutina> Evolat 
+<definicionFuncion> assokh thikh Evolat 
+<definicionProcedimiento> assokh thikh Evolat 
+<parametrosFormales> ) 
+<parametrosReales> ) 
+<agregarParametrosReales> ) 
+<inicioPrograma>  EOF  
+<instrucciones> nakho arrekVos arrekSek .  EOF  
+<instruccion> ID kash evat iste ha she save soro verat yarat sille irge charat nakho arrekVos arrekSek .  EOF  
+<instruccionWHILE> . 
+<bloqueInstrucciones> Arrekaan . ID kash evat iste ha she save soro verat yarat sille irge charat nakho arrekVos arrekSek  EOF  
+<instruccionIF> . 
+<valorCondicional> . 
+<valorCondicionalSek> . 
+<valorCondicionalVos> . 
+<instruccionFor> . 
+<InstruccionWith> . 
+<instruccionRepeat> . 
+<instruccionHalt> . 
+<instruccionesSencillas> . 
+<asignacionFamilia> [ { << yath zohhe athzhokwazar 
+<sistemaAsignacion> . 
+<valorQueAsigna> . 
+<sistemaAsignacionVariables> // * % + - > >= < <= = <> && || ma vo 
+<operacionAcceso> // * % + - > >= < <= = <> && || ma vo 
+<accesoString> // * % + - > >= < <= = <> && || ma vo 
+<accesoRegistro> // * % + - > >= < <= = <> && || ma vo 
+<accesoArreglos> // * % + - > >= < <= = <> && || ma vo 
+<masDimension> // * % + - > >= < <= = <> && || ma vo 
+<SizeOF> ( ID |< |> |><| |* <_> <^> <&> <#> { %+ %- %? %! expresion vo asolat literalEntero literalChar literalString sek vos ! 
+<operacionesStr> // * % + - > >= < <= = <> && || ma vo 
+<tipoOperacionStr> // * % + - > >= < <= = <> && || ma vo 
+<operacionesStringVarias> literalString 
+<literalesOperacionString> // * % + - > >= < <= = <> && || ma vo 
+<literalesOperacionStringChar> | // * % + - > >= < <= = <> && || ma vo 
+<operacionesChar> // * % + - > >= < <= = <> && || ma vo 
+<operacionChar> literalChar 
+<operacionConjunto> // * % + - > >= < <= = <> && || ma vo 
+<operacionesConjuntos> { 
+<literalesConjuntosVar> %& %~ // * % + - > >= < <= = <> && || ma vo 
+<operacionesConjuntosVar> { 
+<operacionesConjuntosChar> { 
+<operacionLogica> // * % + - > >= < <= = <> && || ma vo 
+<operacionesLogicas> expresion 
+<operadorLogico> expresion 
+<expresion> tat ) emralat akko : >| <| . 
+<expresionID> tat ) emralat akko : >| <| . 
+<addExpresionMulDivCom> tat ) emralat akko : >| <| . 
+<addExpresioSumRes> tat ) emralat akko : >| <| . 
+<addExpresionCondicional> tat ) emralat akko : >| <| . 
+<addExpresionLogicaD> tat ) emralat akko : >| <| . 
+<addExpresionLogica> tat ) emralat akko : >| <| . 
+<OperacionComparacion> yath zohhe athzhokwazar 
+<OperacionCondicionalLogica> yath zohhe athzhokwazar 
+<OperacionCondicional> yath zohhe athzhokwazar 
+<sumRest> yath zohhe athzhokwazar 
+<mulDivCom> yath zohhe athzhokwazar 
+<operacionUnitaria> ( ID |< |> |><| |* <_> <^> <&> <#> { %+ %- %? %! expresion vo asolat literalEntero literalChar literalString sek vos ! 
+<IncreDecremento> ( ID |< |> |><| |* <_> <^> <&> <#> { %+ %- %? %! expresion vo asolat literalEntero literalChar literalString sek vos ! 
+<tipo> := . debug // * % + - > >= < <= = <> && || ma vo assokh thikh Evolat literalEntero literalChar literalString sek vos : 
+<tipoCompleto> . literalEntero literalChar literalString sek vos : // * % + - > >= < <= = <> && || ma vo assokh thikh Evolat 
+<VALOR> , >> literalEntero literalChar literalString sek vos . // * % + - > >= < <= = <> && || ma vo ] } 
+<literalBoleana> , >> literalEntero literalChar literalString sek vos . // * % + - > >= < <= = <> && || ma vo ] } 
+<valorRetorno> . 
+<manejoSalida> . 
+<manejoEntrada> // * % + - > >= < <= = <> && || ma vo 
+<cohersionTipos> // * % + - > >= < <= = <> && || ma vo 
+<instruccionSwitch> . 
+<casos> nakhaan nakho 
+<valorDefault> nakho 
