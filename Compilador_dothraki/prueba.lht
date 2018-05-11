@@ -1,2 +1,34 @@
-Hake MegaEjemplo evolat
+<* asd *>
+Hake MegaEjemplo .  ..... 
+
+Evoon	
+ cteA Kemat 23 .
+ cteB Kemat "Literal de string" .
+ cteC Kemat 'a'.
+
+Veneser	
+  Edad Vineserat Yanqokh.
+
+Esinasolat	
+   A shim yorosor := 10 .     
+   B shim lirikh .             
+   C, D shim laqat .          
+   E, F shim yorosor := 3 .
+   H shim akat := sek .       
+   I,J,B,C shim yanqokh := {12, 12, 321, "casa"}.  
+   AR1 shim Khalassar [5] [4] akat := [[1,2],[3,4],[5,6],[7,8]]. 
+   AR2 shim Khalassar [4][2] yorosor := [[1,2,[3,4],[5,6],[7,8]] . 
+   R2 shim Marilat
+            X shim lirikh .
+            Y shim akat .
+            Z shim yanqokh.
+           Hethkat := << 'K' , vos , 3 >> .
+
+Evolat
+ 
+
+
+
+
+
 

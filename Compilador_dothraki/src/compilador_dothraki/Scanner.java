@@ -445,8 +445,6 @@ public class Scanner {
    
    public void generar_muro_ladrillos() throws FileNotFoundException, IOException{
        int largo_tokens = lista_tokens.size();
-       int contador = 0;
-       int tokens_cantidad = 0;
        String inicio_html = "<!DOCTYPE html>\n" +
                             "<html>\n" +
                             "<head>\n" +
