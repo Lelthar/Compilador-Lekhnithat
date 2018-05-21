@@ -55,21 +55,24 @@ public class Parser {
                         token_actual = lista_tokens.get(indice_lista_token);
 
                     }else{
-                        System.out.println("Error  sintactico con el EAP(1): "+elemento_actual_proceso+" Y token: "+token_actual.lexema);
+                        System.out.println("Error  sintactico con el EAP(1): "+elemento_actual_proceso+" Y token: "+token_actual.lexema+
+                                " Fila: "+token_actual.fila+", entre columnas: "+token_actual.columna_inicio+"|"+token_actual.columna_final);
                         //System.out.println("Se esperaba: "+elemento_actual_proceso);
                     }
                 }else{
                     //System.out.println("Lexema: "+token_actual.lexema);
                     regla = Gramatica.getTablaParsing(abs(elemento_actual_proceso-Gramatica.NO_TERMINAL_INICIAL), token_actual.codigo_familia);
                     if(regla < 0){
-                        System.out.println("Error  sintactico con el EAP(2): "+elemento_actual_proceso+" Y token: "+token_actual.lexema);
+                        System.out.println("Error  sintactico con el EAP(2): "+elemento_actual_proceso+" Y token: "+token_actual.lexema+
+                                " Fila: "+token_actual.fila+", entre columnas: "+token_actual.columna_inicio+"|"+token_actual.columna_final);
                         //System.out.println("Procesando elemento: "+elemento_actual_proceso);
                         int follow = elemento_actual_proceso-Gramatica.NO_TERMINAL_INICIAL;
                         int i = 0;
+                        //System.out.println("OBTENIENDO FOLLOWS PARA: "+follow);
                         ArrayList<Integer> listaFollow = new ArrayList<>();
                         while((Gramatica.getTablaFollows(follow, i)) > -1 && (i < Gramatica.MAX_FOLLOWS-1)){
                             int valorFollow =Gramatica.getTablaFollows(follow, i++);
-                            System.out.println("OBTIENE FOLLOW: "+valorFollow+" i: "+i);
+                            //System.out.println("OBTIENE FOLLOW: "+valorFollow+" i: "+i);
                             listaFollow.add(valorFollow);
 
                         }
@@ -102,7 +105,7 @@ public class Parser {
                                 if(existeRegla!=-1){                                
                                     push_pila_parsing(pila_parsing, elemento_actual_proceso);
                                     token_actual=tken;
-                                    System.out.println("Codigo invalido debido al error: "+desecho);
+                                    //System.out.println("Codigo invalido debido al error: "+desecho);
                                     break;
                                 }else{
                                     desecho+=tken.lexema;
@@ -111,7 +114,7 @@ public class Parser {
                         }else{
                             int valorCorrecto = pop_pila_parsing(pila_parsing);
                             if(Gramatica.esTerminal(valorCorrecto)){
-                                System.out.println("Procesando Teminal: "+ valorCorrecto);
+                                //System.out.println("Procesando Teminal: "+ valorCorrecto);
                                 if(valorCorrecto==111){
                                     valorCorrecto=129;
                                 }
@@ -121,7 +124,7 @@ public class Parser {
                                     //System.out.println("VER: "+tken.codigo_familia);
                                     if(tken.codigo_familia==valorCorrecto){
                                         push_pila_parsing(pila_parsing, valorCorrecto);
-                                        System.out.println("Se encontro token del codigo con el token: "+tken.lexema);
+                                        //System.out.println("Se encontro token del codigo con el token: "+tken.lexema);
                                         token_actual=tken;
                                         System.out.println("Codigo invalido debido al error: "+desecho);
                                         break;
