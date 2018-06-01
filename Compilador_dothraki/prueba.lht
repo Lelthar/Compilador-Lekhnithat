@@ -1,0 +1,27 @@
+<* asd *>
+Hake MegaEjemplo .
+
+Evoon	
+ cteA Kemat 23 .
+ cteB Kemat "Literal de string" .
+ cteC Kemat {'a','b','c'}.
+ cteD Kemat [[1,2],[3,4],[5,6],[7,8]].
+ cteD Kemat << 'K' , vos , 3 >>.
+
+Veneser	
+  Edad Vineserat Yanqokh.
+  anho Vineserat Edad.
+Esinasolat	
+   A shim yorosor := 10 .     
+   B shim lirikh.             
+   C, D shim laqat .          
+   E, G shim yorosor := 3 .
+   H shim akat := sek .       
+   
+/\Este es un comentario
+Evolat
+ Lista := 3+2+(3*2).
+ Casa := "hola"|><|" mundo".
+
+
+
