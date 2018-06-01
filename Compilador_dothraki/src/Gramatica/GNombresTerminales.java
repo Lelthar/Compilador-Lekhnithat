@@ -1,7 +1,7 @@
 /*
  * GNombresTerminales.java
  *
- * 2018/06/01 03:34:05
+ * 2018/05/10 13:37:05
  *
  * Archivo generado por GikGram 2.0
  *
@@ -116,6 +116,7 @@ abstract class GNombresTerminales
 		"save",
 		"Arrekaan",
 		"soro",
+		"COMANDO",
 		">",
 		">=",
 		"<",
@@ -132,7 +133,6 @@ abstract class GNombresTerminales
 		"gache",
 		"nakhaan",
 		"debug",
-		"COMANDO",
 		" EOF "
 	};
 
