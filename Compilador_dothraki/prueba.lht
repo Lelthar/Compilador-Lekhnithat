@@ -4,31 +4,24 @@ Hake MegaEjemplo .
 Evoon	
  cteA Kemat 23 .
  cteB Kemat "Literal de string" .
- cteC Kemat 'a'.
+ cteC Kemat {'a','b','c'}.
+ cteD Kemat [[1,2],[3,4],[5,6],[7,8]].
+ cteD Kemat << 'K' , vos , 3 >>.
 
 Veneser	
   Edad Vineserat Yanqokh.
-
+  anho Vineserat Edad.
 Esinasolat	
    A shim yorosor := 10 .     
-   B shim lirikh .             
+   B shim lirikh.             
    C, D shim laqat .          
-   E, F shim yorosor := 3 .
+   E, G shim yorosor := 3 .
    H shim akat := sek .       
-   I,J,B,C shim yanqokh := {12, 12, 321, "casa"}.  
-   AR1 shim Khalassar [5] [4] akat := [[1,2],[3,4],[5,6],[7,8]]. 
-   AR2 shim Khalassar [4][2] yorosor := [[1,2],[3,4],[5,6],[7,8]] . 
-   R2 shim Marilat
-            X shim lirikh .
-            Y shim akat .
-            Z shim yanqokh.
-           Hethkat := << 'K' , vos , 3 >> .
-
+   
+/\Este es un comentario
 Evolat
- 
-
-
-
+ Lista := 3+2+(3*2).
+ Casa := "hola"|><|" mundo".
 
 
 

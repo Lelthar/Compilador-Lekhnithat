@@ -1,7 +1,7 @@
 /*
  * Gramatica.java
  *
- * 2018/05/10 13:37:05
+ * 2018/06/01 03:34:05
  *
  * Archivo generado por GikGram 2.0
  *
@@ -40,10 +40,86 @@ public abstract class Gramatica
 	/**
 	 * Constante que contiene el número máximo de follows
 	 */
-	public static final int MAX_FOLLOWS = 45;
+	public static final int MAX_FOLLOWS = 46;
 
 	/* Constantes con las rutinas semánticas */
-	/* NO SE DETECTARON SÍMBOLOS SEMÁNTICOS EN LA GRAMÁTICA */
+	public static final int hake = 214;
+	public static final int constanteID = 215;
+	public static final int agregarConstante = 216;
+	public static final int asignarValoresConstante1 = 217;
+	public static final int agregarConjunto1 = 218;
+	public static final int agregarConjunto2 = 219;
+	public static final int agregarArreglo1 = 220;
+	public static final int agregarArreglo2 = 221;
+	public static final int agregarCampo1 = 222;
+	public static final int agregarCampo2 = 223;
+	public static final int agregarCampo3 = 224;
+	public static final int crearTipoNombre = 225;
+	public static final int agregarNuevoTipo = 226;
+	public static final int asignarTipo1 = 227;
+	public static final int asignarTipo2 = 228;
+	public static final int asignarTipo3 = 229;
+	public static final int asignarTipo4 = 230;
+	public static final int asignarTipo5 = 231;
+	public static final int nuevoVariableID1 = 232;
+	public static final int asignarVariable1 = 233;
+	public static final int creacionVariable1 = 234;
+	public static final int asignarVariable2 = 235;
+	public static final int creacionVariable2 = 236;
+	public static final int asignarVariable3 = 237;
+	public static final int creacionVariable3 = 238;
+	public static final int asignarVariable4 = 239;
+	public static final int creacionVariable4 = 240;
+	public static final int inicializacionConjunto1 = 241;
+	public static final int inicializacionConjunto2 = 242;
+	public static final int agregarValoresConjunto1 = 243;
+	public static final int agregarValoresConjunto2 = 244;
+	public static final int agregarValoresConjunto3 = 245;
+	public static final int nuevoVariableID2 = 246;
+	public static final int inicializacionVariable1 = 247;
+	public static final int crearDimensionalidad1 = 248;
+	public static final int valorDimension1 = 249;
+	public static final int crearDimensionalidad2 = 250;
+	public static final int agregarDimension1 = 251;
+	public static final int valorDimension2 = 252;
+	public static final int agregarDimension2 = 253;
+	public static final int inicializarArreglo1 = 254;
+	public static final int inicializarArreglo2 = 255;
+	public static final int agregarNivelArreglo1 = 256;
+	public static final int agregarNivelArreglo2 = 257;
+	public static final int agrandarNivelArreglo1 = 258;
+	public static final int agregarValorArreglo1 = 259;
+	public static final int agregarValorArreglo2 = 260;
+	public static final int agregarValorArreglo3 = 261;
+	public static final int agregarValorCampo1 = 262;
+	public static final int agregarValorCampo2 = 263;
+	public static final int accesoStrings1 = 264;
+	public static final int accesoStrings2 = 265;
+	public static final int accesoRegistros1 = 266;
+	public static final int accesoRegistros2 = 267;
+	public static final int inicializarExpresion = 268;
+	public static final int finalizarExpresion1 = 269;
+	public static final int agregarOperacion1 = 270;
+	public static final int agregarOperacion2 = 271;
+	public static final int agregarOperandos1 = 272;
+	public static final int agregarOperandos2 = 273;
+	public static final int agregarOperandos3 = 274;
+	public static final int agregarOperandos4 = 275;
+	public static final int agregarOperandos5 = 276;
+	public static final int agregarOperandos6 = 277;
+	public static final int agregarOperandos7 = 278;
+	public static final int agregarOperandos8 = 279;
+	public static final int agregarOperandos9 = 280;
+	public static final int agregarParentesisIzqExp = 281;
+	public static final int agregarParentesisDerExp = 282;
+	public static final int finalizarExpresion2 = 283;
+	public static final int agregarOperando1 = 284;
+	public static final int agregarOperando2 = 285;
+	public static final int agregarOperando3 = 286;
+	public static final int agregarOperando4 = 287;
+	public static final int agregarOperando5 = 288;
+	public static final int agregarYath = 289;
+	public static final int agregarZohhe = 290;
 
 	/**
 	 * Método esTerminal
@@ -66,7 +142,7 @@ public abstract class Gramatica
 	 */
 	public static final boolean esNoTerminal(int numSimbolo)
 	{
-		return ((112 <= numSimbolo) && (numSimbolo <= 218));
+		return ((112 <= numSimbolo) && (numSimbolo <= 213));
 	}
 
 	/**
@@ -79,7 +155,7 @@ public abstract class Gramatica
 	 */
 	public static final boolean esSimboloSemantico(int numSimbolo)
 	{
-		return ((219 <= numSimbolo) && (numSimbolo <= 218));
+		return ((214 <= numSimbolo) && (numSimbolo <= 290));
 	}
 
 	/**

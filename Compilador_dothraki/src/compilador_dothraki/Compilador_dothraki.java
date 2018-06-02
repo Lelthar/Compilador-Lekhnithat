@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -27,9 +26,6 @@ public class Compilador_dothraki {
         scanner.Inicializar_scanner();
         Parser parser = new Parser(scanner.lista_tokens);
         parser.iniciar_parsing();
-        
-        //semantico seman = new semantico();
-        //seman.crearArchivoFuente("ARCHIVO");
         /*
         int n = (int) (Math.pow(2, 5)*10);
         System.out.println("N:"+n);
@@ -79,33 +75,3 @@ public class Compilador_dothraki {
     }
     
 }
-=======
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package compilador_dothraki;
-
-import java.io.IOException;
-import java.util.Arrays;
-
-/**
- *
- * @author Gerald
- */
-public class Compilador_dothraki {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) throws IOException {
-        // TODO code application logic here
-        Scanner scanner = new Scanner("prueba.lht");
-        scanner.Inicializar_scanner();
-        Parser parser = new Parser(scanner.lista_tokens);
-        parser.iniciar_parsing();
-    }
-    
-}
->>>>>>> parent of ec2ce29... ActualizarProyecto
